@@ -43,7 +43,7 @@ int main(int, char **)
         }
     }
 
-    std::cout << "Average speed " <<  average_speed_ms/num_frames << "ms. (" << 1000.0/(average_speed_ms/num_frames) << "fps)" << std::endl;
+    //std::cout << "Average speed " <<  average_speed_ms/num_frames << "ms. (" << 1000.0/(average_speed_ms/num_frames) << "fps)" << std::endl;
 
     return 0;
 }
