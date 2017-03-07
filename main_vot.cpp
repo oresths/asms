@@ -43,7 +43,18 @@ int main(int, char **)
         }
     }
 
-    //std::cout << "Average speed " <<  average_speed_ms/num_frames << "ms. (" << 1000.0/(average_speed_ms/num_frames) << "fps)" << std::endl;
+    std::cout << "Average speed " <<  average_speed_ms/num_frames << "ms. (" << 1000.0/(average_speed_ms/num_frames) << "fps)" << std::endl;
+
+	std::string output = "fps.txt";
+	std::ofstream fps_ofstream;
+
+	fps_ofstream.open(output.c_str());
+	if (!fps_ofstream.is_open())
+		std::cerr << "Error opening output file " << output << "!" << std::endl;
+
+	fps_ofstream << 1000.0 / (average_speed_ms / num_frames) << std::endl;
+
+	fps_ofstream.close();
 
     return 0;
 }
